@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { Hero } from "../components/Home/Hero";
 import { Layout } from "../components/Layout/Layout";
 import { Projects } from "../components/Home/Projects";
+import { FeaturedArticles } from "../components/Home/FeaturedArticles";
 const query = `{
   getPageDocument(relativePath: "home.mdx"){id
   	data{
@@ -68,18 +69,7 @@ export default function Home(props) {
               case "PageBlocksFeatures":
                 return (
                   <Fragment key={i + block.__typename}>
-                    {block.items?.map((item) => {
-                      return (
-                        <Fragment key={item.title}>
-                          <div>{item.image}</div>
-                          <div>{item.title}</div>
-                          <div>{item.author}</div>
-                          <div>{item.category}</div>
-                          <div>{item.description}</div>
-                          <div>{item.href}</div>
-                        </Fragment>
-                      );
-                    })}
+                    <FeaturedArticles data={block} />
                   </Fragment>
                 );
             }
