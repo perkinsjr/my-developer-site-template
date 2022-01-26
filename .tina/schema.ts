@@ -79,6 +79,54 @@ const projectSection: TinaTemplate = {
   ],
 };
 
+const featureSection: TinaTemplate = {
+  name: "features",
+  label: "Featured Articles",
+  fields: [
+    {
+      type: "object",
+      label: "Featured Items",
+      name: "items",
+      list: true,
+      fields: [
+        {
+          name: "image",
+          label: "Featured Image",
+          type: "image",
+        },
+        {
+          name: "title",
+          label: "Featured Title",
+          type: "string",
+        },
+        {
+          name: "author",
+          label: "Featured Author",
+          type: "string",
+        },
+        {
+          name: "category",
+          label: "Featured Category",
+          type: "string",
+        },
+        {
+          type: "string",
+          label: "Description",
+          name: "description",
+          ui: {
+            component: "textarea",
+          },
+        },
+        {
+          name: "href",
+          label: "Link URL",
+          type: "string",
+        },
+      ],
+    },
+  ],
+};
+
 export default defineSchema({
   collections: [
     {
@@ -91,7 +139,7 @@ export default defineSchema({
           list: true,
           name: "blocks",
           label: "Sections",
-          templates: [heroBlock, projectSection],
+          templates: [heroBlock, projectSection, featureSection],
         },
       ],
     },

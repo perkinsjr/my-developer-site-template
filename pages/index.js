@@ -23,6 +23,16 @@ const query = `{
             href
           }
         }
+        ... on PageBlocksFeatures{
+          items{
+            image
+            title
+            author
+            category
+            description
+            href
+          }
+        }
       }
     }
   }
@@ -58,6 +68,23 @@ export default function Home(props) {
                         <Fragment key={item.name}>
                           <div>{item.image}</div>
                           <div>{item.name}</div>
+                          <div>{item.description}</div>
+                          <div>{item.href}</div>
+                        </Fragment>
+                      );
+                    })}
+                  </Fragment>
+                );
+              case "PageBlocksFeatures":
+                return (
+                  <Fragment key={i + block.__typename}>
+                    {block.items?.map((item) => {
+                      return (
+                        <Fragment key={item.title}>
+                          <div>{item.image}</div>
+                          <div>{item.title}</div>
+                          <div>{item.author}</div>
+                          <div>{item.category}</div>
                           <div>{item.description}</div>
                           <div>{item.href}</div>
                         </Fragment>

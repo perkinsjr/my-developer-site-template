@@ -57,6 +57,17 @@
                     "hero",
                     "description"
                   ]
+                },
+                {
+                  "type": "image",
+                  "name": "image",
+                  "label": "Hero Image",
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "hero",
+                    "image"
+                  ]
                 }
               ],
               "namespace": [
@@ -161,6 +172,106 @@
                 "page",
                 "blocks",
                 "projects"
+              ]
+            },
+            {
+              "name": "features",
+              "label": "Featured Articles",
+              "fields": [
+                {
+                  "type": "object",
+                  "label": "Featured Items",
+                  "name": "items",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "image",
+                      "label": "Featured Image",
+                      "type": "image",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "features",
+                        "items",
+                        "image"
+                      ]
+                    },
+                    {
+                      "name": "title",
+                      "label": "Featured Title",
+                      "type": "string",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "features",
+                        "items",
+                        "title"
+                      ]
+                    },
+                    {
+                      "name": "author",
+                      "label": "Featured Author",
+                      "type": "string",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "features",
+                        "items",
+                        "author"
+                      ]
+                    },
+                    {
+                      "name": "category",
+                      "label": "Featured Category",
+                      "type": "string",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "features",
+                        "items",
+                        "category"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Description",
+                      "name": "description",
+                      "ui": {
+                        "component": "textarea"
+                      },
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "features",
+                        "items",
+                        "description"
+                      ]
+                    },
+                    {
+                      "name": "href",
+                      "label": "Link URL",
+                      "type": "string",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "features",
+                        "items",
+                        "href"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "features",
+                    "items"
+                  ]
+                }
+              ],
+              "namespace": [
+                "page",
+                "blocks",
+                "features"
               ]
             }
           ],

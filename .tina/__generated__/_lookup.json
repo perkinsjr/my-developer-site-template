@@ -22,7 +22,8 @@
     "resolveType": "unionData",
     "typeMap": {
       "hero": "PageBlocksHero",
-      "projects": "PageBlocksProjects"
+      "projects": "PageBlocksProjects",
+      "features": "PageBlocksFeatures"
     }
   },
   "PageDocument": {

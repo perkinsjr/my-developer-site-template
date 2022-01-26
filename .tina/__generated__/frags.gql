@@ -5,6 +5,7 @@ fragment PageParts on Page {
       heading
       subheading
       description
+      image
     }
     ... on PageBlocksProjects {
       heading
@@ -13,6 +14,17 @@ fragment PageParts on Page {
         __typename
         image
         name
+        description
+        href
+      }
+    }
+    ... on PageBlocksFeatures {
+      items {
+        __typename
+        image
+        title
+        author
+        category
         description
         href
       }
