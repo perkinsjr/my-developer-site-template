@@ -1,8 +1,9 @@
 import { staticRequest } from "tinacms";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/edit-state";
 import { Fragment } from "react";
+import { Hero } from "../components/Home/Hero";
+import { Layout } from "../components/Layout/Layout";
 const query = `{
   getPageDocument(relativePath: "home.mdx"){id
   	data{
@@ -12,6 +13,7 @@ const query = `{
           heading
           subheading
           description
+          image
         }
         ... on PageBlocksProjects{
           heading,
@@ -53,9 +55,7 @@ export default function Home(props) {
               case "PageBlocksHero":
                 return (
                   <Fragment key={i + block.__typename}>
-                    <div>{block.heading}</div>
-                    <div>{block.subheading}</div>
-                    <div>{block.description}</div>
+                    <Hero data={block} />
                   </Fragment>
                 );
               case "PageBlocksProjects":

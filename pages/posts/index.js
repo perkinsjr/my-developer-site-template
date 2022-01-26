@@ -1,5 +1,4 @@
 import { staticRequest } from "tinacms";
-import { Layout } from "../../components/Layout";
 import Link from "next/link";
 import { useTina } from "tinacms/dist/edit-state";
 
@@ -24,7 +23,7 @@ export default function Home(props) {
   });
   const postsList = data.getPostList.edges;
   return (
-    <Layout>
+    <>
       <h1>Posts</h1>
       <div>
         {postsList.map((post) => (
@@ -35,7 +34,7 @@ export default function Home(props) {
           </div>
         ))}
       </div>
-    </Layout>
+    </>
   );
 }
 

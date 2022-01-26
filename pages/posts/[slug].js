@@ -1,5 +1,4 @@
 import { staticRequest } from "tinacms";
-import { Layout } from "../../components/Layout";
 import { useTina } from "tinacms/dist/edit-state";
 
 const query = `query getPost($relativePath: String!) {
@@ -20,7 +19,7 @@ export default function Home(props) {
   });
 
   return (
-    <Layout>
+    <>
       <code>
         <pre
           style={{
@@ -30,7 +29,7 @@ export default function Home(props) {
           {JSON.stringify(data.getPostDocument.data, null, 2)}
         </pre>
       </code>
-    </Layout>
+    </>
   );
 }
 
