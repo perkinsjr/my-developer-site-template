@@ -1,0 +1,112 @@
+{
+  "version": {
+    "fullVersion": "0.59.5",
+    "major": "0",
+    "minor": "59",
+    "patch": "5"
+  },
+  "meta": {},
+  "collections": [
+    {
+      "label": "Page Content",
+      "name": "page",
+      "path": "content/page",
+      "fields": [
+        {
+          "type": "object",
+          "list": true,
+          "name": "blocks",
+          "label": "Sections",
+          "templates": [
+            {
+              "name": "hero",
+              "label": "Hero Block",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Heading",
+                  "name": "heading",
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "hero",
+                    "heading"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Sub Heading",
+                  "name": "subheading",
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "hero",
+                    "subheading"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "ui": {
+                    "component": "textarea"
+                  },
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "hero",
+                    "description"
+                  ]
+                }
+              ],
+              "namespace": [
+                "page",
+                "blocks",
+                "hero"
+              ]
+            }
+          ],
+          "namespace": [
+            "page",
+            "blocks"
+          ]
+        }
+      ],
+      "namespace": [
+        "page"
+      ]
+    },
+    {
+      "label": "Blog Posts",
+      "name": "post",
+      "path": "content/post",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Title",
+          "name": "title",
+          "namespace": [
+            "post",
+            "title"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Blog Post Body",
+          "name": "body",
+          "isBody": true,
+          "ui": {
+            "component": "textarea"
+          },
+          "namespace": [
+            "post",
+            "body"
+          ]
+        }
+      ],
+      "namespace": [
+        "post"
+      ]
+    }
+  ]
+}
