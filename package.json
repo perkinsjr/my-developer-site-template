@@ -8,7 +8,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tinacms/auth": "^0.50.2",
     "next": "12.0.3",
+    "next-tinacms-cloudinary": "^3.5.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-is": "^17.0.2",

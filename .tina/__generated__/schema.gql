@@ -85,7 +85,20 @@ type PageBlocksHero {
   description: String
 }
 
-union PageBlocks = PageBlocksHero
+type PageBlocksProjectsItems {
+  image: String
+  name: String
+  description: String
+  href: String
+}
+
+type PageBlocksProjects {
+  heading: String
+  subheading: String
+  items: [PageBlocksProjectsItems]
+}
+
+union PageBlocks = PageBlocksHero | PageBlocksProjects
 
 type Page {
   blocks: [PageBlocks]
@@ -157,8 +170,22 @@ input PageBlocksHeroMutation {
   description: String
 }
 
+input PageBlocksProjectsItemsMutation {
+  image: String
+  name: String
+  description: String
+  href: String
+}
+
+input PageBlocksProjectsMutation {
+  heading: String
+  subheading: String
+  items: [PageBlocksProjectsItemsMutation]
+}
+
 input PageBlocksMutation {
   hero: PageBlocksHeroMutation
+  projects: PageBlocksProjectsMutation
 }
 
 input PageMutation {

@@ -64,6 +64,104 @@
                 "blocks",
                 "hero"
               ]
+            },
+            {
+              "name": "projects",
+              "label": "Projects Section",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Heading",
+                  "name": "heading",
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "projects",
+                    "heading"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Sub Heading",
+                  "name": "subheading",
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "projects",
+                    "subheading"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "label": "Project Items",
+                  "name": "items",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "image",
+                      "label": "Project Image",
+                      "type": "image",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "projects",
+                        "items",
+                        "image"
+                      ]
+                    },
+                    {
+                      "name": "name",
+                      "label": "Content name",
+                      "type": "string",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "projects",
+                        "items",
+                        "name"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Description",
+                      "name": "description",
+                      "ui": {
+                        "component": "textarea"
+                      },
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "projects",
+                        "items",
+                        "description"
+                      ]
+                    },
+                    {
+                      "name": "href",
+                      "label": "Link URL",
+                      "type": "string",
+                      "namespace": [
+                        "page",
+                        "blocks",
+                        "projects",
+                        "items",
+                        "href"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "page",
+                    "blocks",
+                    "projects",
+                    "items"
+                  ]
+                }
+              ],
+              "namespace": [
+                "page",
+                "blocks",
+                "projects"
+              ]
             }
           ],
           "namespace": [

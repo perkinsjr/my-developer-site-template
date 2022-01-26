@@ -21,7 +21,8 @@
     "type": "PageBlocks",
     "resolveType": "unionData",
     "typeMap": {
-      "hero": "PageBlocksHero"
+      "hero": "PageBlocksHero",
+      "projects": "PageBlocksProjects"
     }
   },
   "PageDocument": {

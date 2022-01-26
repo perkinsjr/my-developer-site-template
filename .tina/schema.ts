@@ -23,6 +23,59 @@ const heroBlock: TinaTemplate = {
         component: "textarea",
       },
     },
+    {
+      type: "image",
+      name: "image",
+      label: "Hero Image",
+    },
+  ],
+};
+
+const projectSection: TinaTemplate = {
+  name: "projects",
+  label: "Projects Section",
+  fields: [
+    {
+      type: "string",
+      label: "Heading",
+      name: "heading",
+    },
+    {
+      type: "string",
+      label: "Sub Heading",
+      name: "subheading",
+    },
+    {
+      type: "object",
+      label: "Project Items",
+      name: "items",
+      list: true,
+      fields: [
+        {
+          name: "image",
+          label: "Project Image",
+          type: "image",
+        },
+        {
+          name: "name",
+          label: "Content name",
+          type: "string",
+        },
+        {
+          type: "string",
+          label: "Description",
+          name: "description",
+          ui: {
+            component: "textarea",
+          },
+        },
+        {
+          name: "href",
+          label: "Link URL",
+          type: "string",
+        },
+      ],
+    },
   ],
 };
 
@@ -38,7 +91,7 @@ export default defineSchema({
           list: true,
           name: "blocks",
           label: "Sections",
-          templates: [heroBlock],
+          templates: [heroBlock, projectSection],
         },
       ],
     },

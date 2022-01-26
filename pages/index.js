@@ -13,6 +13,16 @@ const query = `{
           subheading
           description
         }
+        ... on PageBlocksProjects{
+          heading,
+          subheading,
+          items{
+            image
+            name
+            description
+            href
+          }
+        }
       }
     }
   }
@@ -36,6 +46,23 @@ export default function Home(props) {
                     <div>{block.heading}</div>
                     <div>{block.subheading}</div>
                     <div>{block.description}</div>
+                  </Fragment>
+                );
+              case "PageBlocksProjects":
+                return (
+                  <Fragment key={i + block.__typename}>
+                    <div>{block.heading}</div>
+                    <div>{block.subheading}</div>
+                    {block.items?.map((item) => {
+                      return (
+                        <Fragment key={item.name}>
+                          <div>{item.image}</div>
+                          <div>{item.name}</div>
+                          <div>{item.description}</div>
+                          <div>{item.href}</div>
+                        </Fragment>
+                      );
+                    })}
                   </Fragment>
                 );
             }

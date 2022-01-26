@@ -6,6 +6,17 @@ fragment PageParts on Page {
       subheading
       description
     }
+    ... on PageBlocksProjects {
+      heading
+      subheading
+      items {
+        __typename
+        image
+        name
+        description
+        href
+      }
+    }
   }
 }
 

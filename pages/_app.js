@@ -17,7 +17,13 @@ const App = ({ Component, pageProps }) => {
     <>
       <TinaEditProvider
         editMode={
-          <TinaCMS apiURL={apiURL}>
+          <TinaCMS
+            apiURL={apiURL}
+            mediaStore={async () => {
+              const pack = await import("next-tinacms-cloudinary");
+              return pack.TinaCloudCloudinaryMediaStore;
+            }}
+          >
             <Component {...pageProps} />
           </TinaCMS>
         }
