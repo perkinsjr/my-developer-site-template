@@ -4,6 +4,7 @@ import { useTina } from "tinacms/dist/edit-state";
 import { Fragment } from "react";
 import { Hero } from "../components/Home/Hero";
 import { Layout } from "../components/Layout/Layout";
+import { Projects } from "../components/Home/Projects";
 const query = `{
   getPageDocument(relativePath: "home.mdx"){id
   	data{
@@ -61,18 +62,7 @@ export default function Home(props) {
               case "PageBlocksProjects":
                 return (
                   <Fragment key={i + block.__typename}>
-                    <div>{block.heading}</div>
-                    <div>{block.subheading}</div>
-                    {block.items?.map((item) => {
-                      return (
-                        <Fragment key={item.name}>
-                          <div>{item.image}</div>
-                          <div>{item.name}</div>
-                          <div>{item.description}</div>
-                          <div>{item.href}</div>
-                        </Fragment>
-                      );
-                    })}
+                    <Projects data={block} />
                   </Fragment>
                 );
               case "PageBlocksFeatures":
