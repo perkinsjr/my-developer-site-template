@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { TinaEditProvider } from "tinacms/dist/edit-state";
 import { ChakraProvider } from "@chakra-ui/react";
+import "../utils/player.css";
 const TinaCMS = dynamic(() => import("tinacms"), { ssr: false });
 
 const branch = "main";

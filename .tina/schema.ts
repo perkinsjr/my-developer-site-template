@@ -147,6 +147,7 @@ export default defineSchema({
       label: "Blog Posts",
       name: "post",
       path: "content/post",
+      format: "mdx",
       fields: [
         {
           type: "string",
@@ -154,13 +155,62 @@ export default defineSchema({
           name: "title",
         },
         {
+          type: "datetime",
+          label: "Published Date",
+          name: "date",
+        },
+        {
+          type: "image",
+          label: "Cover Image",
+          name: "image",
+        },
+        {
           type: "string",
-          label: "Blog Post Body",
-          name: "body",
-          isBody: true,
+          label: "Author",
+          name: "author",
+        },
+        {
+          type: "string",
+          label: "Category",
+          name: "category",
+          options: ["tutorials", "thoughts", "productivity", "other"],
+          list: true,
+        },
+        {
+          type: "string",
+          label: "Tags",
+          name: "tags",
+          list: true,
+          ui: {
+            component: "tags",
+          },
+        },
+        {
+          type: "string",
+          label: "description",
+          name: "description",
           ui: {
             component: "textarea",
           },
+        },
+        {
+          type: "rich-text",
+          label: "Blog Post Body",
+          name: "body",
+          isBody: true,
+          templates: [
+            {
+              name: "youtube",
+              label: "Youtube Video",
+              fields: [
+                {
+                  type: "string",
+                  label: "Youtube Video URL",
+                  name: "url",
+                },
+              ],
+            },
+          ],
         },
       ],
     },

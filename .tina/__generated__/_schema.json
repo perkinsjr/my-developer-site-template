@@ -289,6 +289,7 @@
       "label": "Blog Posts",
       "name": "post",
       "path": "content/post",
+      "format": "mdx",
       "fields": [
         {
           "type": "string",
@@ -300,13 +301,102 @@
           ]
         },
         {
+          "type": "datetime",
+          "label": "Published Date",
+          "name": "date",
+          "namespace": [
+            "post",
+            "date"
+          ]
+        },
+        {
+          "type": "image",
+          "label": "Cover Image",
+          "name": "image",
+          "namespace": [
+            "post",
+            "image"
+          ]
+        },
+        {
           "type": "string",
-          "label": "Blog Post Body",
-          "name": "body",
-          "isBody": true,
+          "label": "Author",
+          "name": "author",
+          "namespace": [
+            "post",
+            "author"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Category",
+          "name": "category",
+          "options": [
+            "tutorials",
+            "thoughts",
+            "productivity",
+            "other"
+          ],
+          "list": true,
+          "namespace": [
+            "post",
+            "category"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Tags",
+          "name": "tags",
+          "list": true,
+          "ui": {
+            "component": "tags"
+          },
+          "namespace": [
+            "post",
+            "tags"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "description",
+          "name": "description",
           "ui": {
             "component": "textarea"
           },
+          "namespace": [
+            "post",
+            "description"
+          ]
+        },
+        {
+          "type": "rich-text",
+          "label": "Blog Post Body",
+          "name": "body",
+          "isBody": true,
+          "templates": [
+            {
+              "name": "youtube",
+              "label": "Youtube Video",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Youtube Video URL",
+                  "name": "url",
+                  "namespace": [
+                    "post",
+                    "body",
+                    "youtube",
+                    "url"
+                  ]
+                }
+              ],
+              "namespace": [
+                "post",
+                "body",
+                "youtube"
+              ]
+            }
+          ],
           "namespace": [
             "post",
             "body"
