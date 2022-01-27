@@ -1563,12 +1563,7 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.1.tgz#9551142a1980503752536b5050fd99f4a7f13b17"
   integrity sha512-gfta+H8aziZsm8pZa0vj04KO6biEiisppNgA1kbJvFrrWu9Vm7eaUEy76DIxsuTaWvti5fkJVhllWc6ZTE+Mdw==
 
-"@headlessui/react@^1.4.1":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.2.tgz#87e264f190dbebbf8dfdd900530da973dad24576"
-  integrity sha512-N8tv7kLhg9qGKBkVdtg572BvKvWhmiudmeEpOCyNwzOsZHCXBtl8AazGikIfUS+vBoub20Fse3BjawXDVPPdug==
-
-"@headlessui/react@^1.4.2":
+"@headlessui/react@^1.4.1", "@headlessui/react@^1.4.2":
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.3.tgz#f77c6bb5cb4a614a5d730fb880cab502d48abf37"
   integrity sha512-n2IQkaaw0aAAlQS5MEXsM4uRK+w18CrM72EqnGRl/UBOQeQajad8oiKXR9Nk15jOzTFQjpxzrZMf1NxHidFBiw==
@@ -10292,10 +10287,10 @@ timers-browserify@2.0.12:
   dependencies:
     setimmediate "^1.0.4"
 
-tinacms@0.0.0-2022025214020:
-  version "0.0.0-2022025214020"
-  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.0.0-2022025214020.tgz#9234c95177406acf854e3de8b59f0f10fd831174"
-  integrity sha512-AWm3O9aoaVRG4IP1k/jFo6yhgeWqKHpVlCrGYe7/TcFeUgzGBY4vYuYqzqB9x+8s/j/OgXPAHmDIZhlq1sosHg==
+tinacms@0.65.3:
+  version "0.65.3"
+  resolved "https://registry.yarnpkg.com/tinacms/-/tinacms-0.65.3.tgz#7b736510e5e5e53eaf4f3d20a15bdc80a490d5eb"
+  integrity sha512-iBec06zB+hwLu7ZNOT9bwiaSBUZmqfdwtwGYirQZxFNQRUwiVqmHqt9ixf98gyIRQcAvXLFAQMVAvyH9E9lInQ==
   dependencies:
     "@headlessui/react" "^1.4.1"
     "@heroicons/react" "^1.0.4"
