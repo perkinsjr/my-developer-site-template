@@ -129,32 +129,24 @@ export default function Slug(props) {
           description={data.getPostDocument.data.description}
           image={data.getPostDocument.data.image}
           date={data.getPostDocument.data.date}
-        >
-          <Box
-            maxWidth="1080px"
-            width="100%"
-            mx="auto"
-            mt={[2, 4]}
-            mb="4"
-            px="4"
-          >
-            <article>
-              <Heading
-                as="h1"
-                color="purple.300"
-                size="3xl"
-                textAlign="center"
-                my={8}
-              >
-                {data.getPostDocument.data.title}
-              </Heading>
-              <TinaMarkdown
-                content={data.getPostDocument.data.body}
-                components={components}
-              />
-            </article>
-          </Box>
-        </Seo>
+        />
+        <Box maxWidth="1080px" width="100%" mx="auto" mt={[2, 4]} mb="4" px="4">
+          <article>
+            <Heading
+              as="h1"
+              color="purple.300"
+              size="3xl"
+              textAlign="center"
+              my={8}
+            >
+              {data.getPostDocument.data.title}
+            </Heading>
+            <TinaMarkdown
+              content={data.getPostDocument.data.body}
+              components={components}
+            />
+          </article>
+        </Box>
       </>
     );
   }
