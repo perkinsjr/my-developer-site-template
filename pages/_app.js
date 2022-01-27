@@ -5,7 +5,7 @@ import "../utils/player.css";
 import { Navbar } from "../components/Layout/Navbar/NavBar";
 const TinaCMS = dynamic(() => import("tinacms"), { ssr: false });
 
-const branch = "main";
+const branch = "master";
 const apiURL =
   process.env.NODE_ENV == "development"
     ? "http://localhost:4001/graphql"
