@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { TinaEditProvider } from "tinacms/dist/edit-state";
 import { ChakraProvider } from "@chakra-ui/react";
 import "../utils/player.css";
+import { Navbar } from "../components/Layout/Navbar/NavBar";
 const TinaCMS = dynamic(() => import("tinacms"), { ssr: false });
 
 const branch = "main";
@@ -13,6 +14,7 @@ const apiURL =
 const App = ({ Component, pageProps }) => {
   return (
     <ChakraProvider>
+      <Navbar />
       <TinaEditProvider
         editMode={
           <TinaCMS
@@ -20,6 +22,17 @@ const App = ({ Component, pageProps }) => {
             mediaStore={async () => {
               const pack = await import("next-tinacms-cloudinary");
               return pack.TinaCloudCloudinaryMediaStore;
+            }}
+            documentCreatorCallback={{
+              onNewDocument: ({ collection: { slug }, breadcrumbs }) => {
+                const relativeUrl = `/${slug}/${breadcrumbs.join("/")}`;
+                return (window.location.href = relativeUrl);
+              },
+              filterCollections: (options) => {
+                return options.filter(
+                  (option) => option.label === "Blog Posts"
+                );
+              },
             }}
           >
             <Component {...pageProps} />
