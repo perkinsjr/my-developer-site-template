@@ -185,7 +185,7 @@ export const getStaticProps = async (ctx) => {
   const variables = {
     relativePath: ctx.params.slug + ".mdx",
   };
-  let data = {};
+  let data = null;
   try {
     data = await staticRequest({
       query,
