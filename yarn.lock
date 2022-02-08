@@ -1959,10 +1959,10 @@
   resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-0.50.2.tgz#d44998aac125a68d96d097e49ff84d1c1ff7a7c2"
   integrity sha512-5oBWtkXG8vu/W9txQrcIb7r2GC6XlgpPsO2EKdjGF4gTWZVlwah73OHqL/QogZWIbZ/4znPL1QkZVwGZuYURiw==
 
-"@tinacms/cli@^0.60.4":
-  version "0.60.4"
-  resolved "https://registry.yarnpkg.com/@tinacms/cli/-/cli-0.60.4.tgz#efd202d1afff8dcfd8394cafd681bbdf63a20202"
-  integrity sha512-mI4Dly9RNCR8e3akbKY8TrXP/5cKWqODiZUOS1ODXVOHvDX6WJCJY/B6N7C4fGEQs1uRdcV9s7OL7m9d2KZ4vA==
+"@tinacms/cli@^0.60.5":
+  version "0.60.5"
+  resolved "https://registry.yarnpkg.com/@tinacms/cli/-/cli-0.60.5.tgz#ee04950f15d56546b87291e6ff84edd37a430c9d"
+  integrity sha512-tMkEvSPFUMiLBSbm8C4ErFiCsxBSCh7zlcH1MJAHbXdOaPKx/M1K6UtkuysKWFKfpvz0+e1QwixVyrWzpYUNRw==
   dependencies:
     "@graphql-codegen/core" "^2.1.0"
     "@graphql-codegen/plugin-helpers" latest
