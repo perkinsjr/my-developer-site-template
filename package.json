@@ -12,7 +12,7 @@
     "@chakra-ui/react": "^1.8.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "@tinacms/auth": "^0.50.2",
+    "@tinacms/auth": "^0.50.3",
     "framer-motion": "^5",
     "next": "12.0.3",
     "next-tinacms-cloudinary": "^3.5.3",
